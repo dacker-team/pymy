@@ -133,7 +133,7 @@ def create_table(instance, data, primary_key=(), types=None):
     if boolean.lower() in ('y', 'yes'):
         try:
             ex_query(query)
-        except pymysql.err.ProgrammingError as e:
+        except (pymysql.err.ProgrammingError, pymysql.err.InternalError) as e:
             e = str(e)
             if "schema" in e or "database" in e:
                 ex_query("CREATE SCHEMA " + data['table_name'].split(".")[0])
