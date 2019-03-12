@@ -18,7 +18,7 @@ with open('LICENSE') as f:
 
 setup(
     name='pymy',
-    version='0.0.4',
+    version='0.0.6',
     description='Easily send data to MySQL',
     long_description=readme,
     author='Dacker',

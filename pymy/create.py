@@ -135,7 +135,7 @@ def create_table(instance, data, primary_key=(), types=None):
             ex_query(query)
         except pymysql.err.ProgrammingError as e:
             e = str(e)
-            if e[:7] == "schema ":
+            if "schema" in e or "database" in e:
                 ex_query("CREATE SCHEMA " + data['table_name'].split(".")[0])
                 ex_query(query)
             elif e[:9].lower() == "relation ":
