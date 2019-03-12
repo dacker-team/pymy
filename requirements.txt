@@ -1,0 +1,2 @@
+pymysql>=0.9.3
+sshtunnel==0.1.4

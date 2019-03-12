@@ -1,0 +1,8 @@
+venv/
+.idea/
+build/
+dist/
+pymy.egg-info/
+*pyc
+sandbox.py
+pyred.egg-info/
